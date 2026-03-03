@@ -122,6 +122,7 @@
                 <asp:GridView runat="server" ID="GridView_ItemMaster" AutoGenerateColumns="false" EmptyDataText="No Records Found!" DataKeyNames="Id" OnRowDeleting="GridView_RowDelete">
                     <HeaderStyle ForeColor="WhiteSmoke" BackColor="DarkBlue" Font-Size="Medium" CssClass="Tbl-Hdr-Txt"/>
                     <RowStyle CssClass="Tbl-Row-Txt" />
+                    <EmptyDataRowStyle ForeColor="OrangeRed" BorderColor="White" Font-Size="17px" />
                     <AlternatingRowStyle BackColor="LightCyan" />
                     <Columns>
                         <asp:BoundField HeaderText="Id" DataField="Id"/>

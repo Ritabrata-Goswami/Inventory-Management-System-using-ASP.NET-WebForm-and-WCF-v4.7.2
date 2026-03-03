@@ -26,18 +26,15 @@ public partial class ItemMaster : System.Web.UI.Page
         {
             WebClient = new HttpClient();
             HttpResponseMessage WebRes = await WebClient.GetAsync("http://localhost:55391/Wcf_ServiceApi.svc/GetItemMaster");
-            if(WebRes != null && WebRes.IsSuccessStatusCode)
-            {
-                string GetDataStr = await WebRes.Content.ReadAsStringAsync();
-                GetAsyncItemMasterData GetDataObj = JsonConvert.DeserializeObject<GetAsyncItemMasterData>(GetDataStr);
+            string GetDataStr = await WebRes.Content.ReadAsStringAsync();
+            GetAsyncItemMasterData GetDataObj = JsonConvert.DeserializeObject<GetAsyncItemMasterData>(GetDataStr);
 
-                string StatusMsg = GetDataObj.GetItemMasterResult.Cls_CommRes.Message;
-                int StatusCode = GetDataObj.GetItemMasterResult.Cls_CommRes.StatusCode;
-                List<GetItemMaster> List_ItemMaster = GetDataObj.GetItemMasterResult.Cls_GetItemMasterList;
+            string StatusMsg = GetDataObj.GetItemMasterResult.Cls_CommRes.Message;
+            int StatusCode = GetDataObj.GetItemMasterResult.Cls_CommRes.StatusCode;
+            List<GetItemMaster> List_ItemMaster = GetDataObj.GetItemMasterResult.Cls_GetItemMasterList;
 
-                GridView_ItemMaster.DataSource = List_ItemMaster;
-                GridView_ItemMaster.DataBind();
-            }
+            GridView_ItemMaster.DataSource = List_ItemMaster;
+            GridView_ItemMaster.DataBind();
         }
         catch (Exception ex)
         {
