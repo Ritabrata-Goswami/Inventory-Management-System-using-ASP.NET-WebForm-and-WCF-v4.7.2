@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
+using System.Security.Policy;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
@@ -236,7 +237,7 @@ namespace WCFService_InventoryManagement
 		                            A.UserCode,
 		                            A.DATE,
 		                            B.UserName 
-                            FROM	ItemMaster A INNER JOIN UserLogin B ON A.UserCode = B.Id
+                            FROM	ItemMaster A INNER JOIN UserLogin B ON B.Id = A.UserCode
                             WHERE	A.Active='Y'";
                 SqlCommand Cmd = new SqlCommand(SqlTxt,Conn);
                 SqlDataReader Reader = Cmd.ExecuteReader();
@@ -285,6 +286,216 @@ namespace WCFService_InventoryManagement
                 Conn?.Close();
             }
             return ClsItemMaster;
+        }
+        public ResVendorMaster GetVendorMaster()
+        {
+            ResVendorMaster ClsVendorMaster = new ResVendorMaster();
+            List<GetVendorMaster> ClsGetVendorMaster_List = new List<GetVendorMaster>();
+            GetVendorMaster ClsGetVendorMaster = null;
+            CommonResponse ClsRes = null;
+            SqlConnection Conn = null;
+            string SqlTxt = "";
+            try
+            {
+                Conn = new SqlConnection(SqlConnStr);
+                Conn.Open();
+                SqlTxt = @"SELECT	A.Id, 
+		                            A.SupplierCode, 
+		                            A.SupplierName, 
+		                            A.Address, 
+		                            A.Phone, 
+		                            B.UserName, 
+		                            A.DATE 
+                            FROM	SupplierMaster A INNER JOIN UserLogin B ON B.Id = A.UserCode 
+                            WHERE	A.Active='Y'";
+                SqlCommand Cmd = new SqlCommand(SqlTxt, Conn);
+                SqlDataReader Reader = Cmd.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        ClsGetVendorMaster = new GetVendorMaster()
+                        {
+                            Id = Convert.ToInt32(Reader["Id"].ToString()),
+                            VendorCode = Reader["SupplierCode"].ToString(),
+                            VendorName = Reader["SupplierName"].ToString(),
+                            VendorAddr = Reader["Address"].ToString(),
+                            Phone = Reader["Phone"].ToString(),
+                            PortalOperatorName = Reader["UserName"].ToString(),
+                            EntryDate = Reader["DATE"].ToString()
+                        };
+                        ClsGetVendorMaster_List.Add(ClsGetVendorMaster);
+                    }
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.OK;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.OK;
+                    ClsRes.Message = "Data fetched successfully!";
+                    ClsVendorMaster.Cls_CommRes = ClsRes;
+                    ClsVendorMaster.Cls_GetVendorMasterList = ClsGetVendorMaster_List;
+                }
+                else
+                {
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.NotFound;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.NotFound;
+                    ClsRes.Message = "No data found on vendor master!";
+                    ClsVendorMaster.Cls_CommRes = ClsRes;
+                }
+            }
+            catch (Exception ex)
+            {
+                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.InternalServerError;
+                ClsRes = new CommonResponse();
+                ClsRes.StatusCode = (int)HttpStatusCode.InternalServerError;
+                ClsRes.Message = ex.Message;
+                ClsVendorMaster.Cls_CommRes = ClsRes;
+            }
+            finally
+            {
+                Conn?.Close();
+            }
+            return ClsVendorMaster;
+        }
+        public ResGrpo GetGrpo()
+        {
+            ResGrpo ClsGrpo = new ResGrpo();
+            List<GetGrpo> ClsGetGrpo_List = new List<GetGrpo>();
+            GetGrpo ClsGetGrpo = null;
+            CommonResponse ClsRes = null;
+            SqlConnection Conn = null;
+            string SqlTxt = "";
+            try
+            {
+                Conn = new SqlConnection(SqlConnStr);
+                Conn.Open();
+                SqlTxt = @"SELECT	A.Id, 
+		                            A.GRNDate,
+		                            A.SupplierCode,
+		                            C.SupplierName,
+		                            A.ItemCode,
+		                            D.ItemName,
+		                            A.ItemQuantity,
+		                            B.UserName, 
+		                            A.DATE 
+                            FROM	GoodsReceiptNote A INNER JOIN UserLogin B ON B.Id = A.UserCode
+                                    INNER JOIN SupplierMaster C ON C.SupplierCode = A.SupplierCode
+		                            INNER JOIN ItemMaster D ON D.ItemCode = A.ItemCode";
+                SqlCommand Cmd = new SqlCommand(SqlTxt, Conn);
+                SqlDataReader Reader = Cmd.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        ClsGetGrpo = new GetGrpo()
+                        {
+                            Id = Convert.ToInt32(Reader["Id"].ToString()),
+                            VendorCode = Reader["SupplierCode"].ToString(),
+                            VendorName = Reader["SupplierName"].ToString(),
+                            ItemCode = Reader["ItemCode"].ToString(),
+                            ItemName = Reader["ItemName"].ToString(),
+                            Qty = Convert.ToDecimal(Reader["ItemQuantity"].ToString()),
+                            PortalOperatorName = Reader["UserName"].ToString(),
+                            GrnDate = Reader["GRNDate"].ToString(),
+                            EntryDate = Reader["DATE"].ToString()
+                        };
+                        ClsGetGrpo_List.Add(ClsGetGrpo);
+                    }
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.OK;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.OK;
+                    ClsRes.Message = "Data fetched successfully!";
+                    ClsGrpo.Cls_CommRes = ClsRes;
+                    ClsGrpo.Cls_GetGrpoList = ClsGetGrpo_List;
+                }
+                else
+                {
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.NotFound;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.NotFound;
+                    ClsRes.Message = "No data found on goods receipt note!";
+                    ClsGrpo.Cls_CommRes = ClsRes;
+                }
+            }
+            catch (Exception ex)
+            {
+                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.InternalServerError;
+                ClsRes = new CommonResponse();
+                ClsRes.StatusCode = (int)HttpStatusCode.InternalServerError;
+                ClsRes.Message = ex.Message;
+                ClsGrpo.Cls_CommRes = ClsRes;
+            }
+            finally
+            {
+                Conn?.Close();
+            }
+            return ClsGrpo;
+        }
+        public ResStockOut GetStockOut()
+        {
+            ResStockOut ClsStockOut = new ResStockOut();
+            List<GetStockOut> ClsGetStockOut_List = new List<GetStockOut>();
+            GetStockOut ClsGetStockOut = null;
+            CommonResponse ClsRes = null;
+            SqlConnection Conn = null;
+            string SqlTxt = "";
+            try
+            {
+                Conn = new SqlConnection(SqlConnStr);
+                Conn.Open();
+                SqlTxt = @"SELECT	A.Id, 
+		                            A.ItemCode,
+		                            C.ItemName,
+		                            A.Quantity,
+		                            B.UserName, 
+		                            A.DATE 
+                            FROM	StockOut A INNER JOIN UserLogin B ON B.Id = A.UserCode
+		                            INNER JOIN ItemMaster C ON C.ItemCode = A.ItemCode";
+                SqlCommand Cmd = new SqlCommand(SqlTxt, Conn);
+                SqlDataReader Reader = Cmd.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        ClsGetStockOut = new GetStockOut()
+                        {
+                            Id = Convert.ToInt32(Reader["Id"].ToString()),
+                            ItemCode = Reader["ItemCode"].ToString(),
+                            ItemName = Reader["ItemName"].ToString(),
+                            Qty = Convert.ToDecimal(Reader["Quantity"].ToString()),
+                            PortalOperatorName= Reader["UserName"].ToString(),
+                            EntryDate = Reader["DATE"].ToString()
+                        };
+                        ClsGetStockOut_List.Add(ClsGetStockOut);
+                    }
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.OK;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.OK;
+                    ClsRes.Message = "Data fetched successfully!";
+                    ClsStockOut.Cls_CommRes = ClsRes;
+                    ClsStockOut.Cls_GetStockOutList = ClsGetStockOut_List;
+                }
+                else
+                {
+                    WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.NotFound;
+                    ClsRes = new CommonResponse();
+                    ClsRes.StatusCode = (int)HttpStatusCode.NotFound;
+                    ClsRes.Message = "No data found on stock out!";
+                    ClsStockOut.Cls_CommRes = ClsRes;
+                }
+            }
+            catch (Exception ex)
+            {
+                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.InternalServerError;
+                ClsRes = new CommonResponse();
+                ClsRes.StatusCode = (int)HttpStatusCode.InternalServerError;
+                ClsRes.Message = ex.Message;
+                ClsStockOut.Cls_CommRes = ClsRes;
+            }
+            finally
+            {
+                Conn?.Close();
+            }
+            return ClsStockOut;
         }
 
 

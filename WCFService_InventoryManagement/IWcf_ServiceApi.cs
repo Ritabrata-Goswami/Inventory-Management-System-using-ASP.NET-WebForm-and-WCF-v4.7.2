@@ -34,7 +34,15 @@ namespace WCFService_InventoryManagement
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/GetItemMaster", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
         ResItemMastere GetItemMaster();
-
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/GetVendorMaster", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ResVendorMaster GetVendorMaster();
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/GetGrpo", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ResGrpo GetGrpo();
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/GetStockOut", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        ResStockOut GetStockOut();
 
         //DELETE methods.
         [OperationContract]
