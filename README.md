@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Inventory-Management-System-using-ASP.NET-and-WCF-v4.7.2
 Basic Inventory Management System that deals with Item Master, Vendor Master, GRN and Stock Out. All the Service layer and business logics are written in WCF RESTful API which is called inside Web Portal build by ASP.NET Web Form. The main intension is to separate the business logics or service layer from UI layer.
 
@@ -76,3 +77,7 @@ In the UI or ASP.NET Web form, we have used ajax() to post data. And ```HttpClie
 <%@ Page Title="Stock-Out" Async="true" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="StockOut.aspx.cs" Inherits="StockOut" %>
 ```
 And register the method as ```RegisterAsyncTask()``` if the method is loaded with the first time page load inside Page_Load() method in .aspx.cs file.
+=======
+# Inventory-Management-System-using-ASP.NET-WebForm-and-WCF-v4.7.2
+Basic Inventory Management System that deals with Item Master, Vendor Master, GRN and Stock Out. All the Service layer and business logics are written in WCF RESTful API which is called inside Web Portal. The main intension is to separate the business logics or service layer from UI layer. 
+>>>>>>> 9c2e22f4ffad504f9035f1dd25818a38c5556b1d
