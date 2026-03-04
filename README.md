@@ -1,4 +1,4 @@
-# Inventory-Management-System-using-ASP.NET-and-WCF-v4.7.2
+# Inventory-Management-System-using-ASP.NET-WebForm-and-WCF-v4.7.2
 Basic Inventory Management System that deals with Item Master, Vendor Master, GRN and Stock Out. All the Service layer and business logics are written in WCF RESTful API which is called inside Web Portal build by ASP.NET Web Form. The main intension is to separate the business logics or service layer from UI layer.
 
 ## How Project Was Created
@@ -74,5 +74,5 @@ namespace WCFService_InventoryManagement
 In the UI or ASP.NET Web form, we have used ajax() to post data. And ```HttpClient(), GetAsync() and DeleteAsync()``` method to fetch the response and delete data from gridview respectively. In order to run async-await request in web form it is recommended to add Async="true" in every .aspx page. Like this,
 ```
 <%@ Page Title="Stock-Out" Async="true" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="StockOut.aspx.cs" Inherits="StockOut" %>
-```.
+```
 And register the method as ```RegisterAsyncTask()``` if the method is loaded with the first time page load inside Page_Load() method in .aspx.cs file.
