@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|d:\\working\\c#\\projects\\inventorymanagementsystem\\inventorymanagement_webportal\\stockout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|solutionrelative:stockout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|d:\\working\\c#\\projects\\inventorymanagementsystem\\inventorymanagement_webportal\\stockout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|solutionrelative:stockout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|d:\\working\\c#\\projects\\inventorymanagementsystem\\inventorymanagement_webportal\\stockout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|solutionrelative:stockout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81ABF4D2-AE66-4915-B7CA-05AA79E19382}|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal|D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\app_code\\class_deserialize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,19 +46,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StockOut.aspx.cs",
-              "DocumentMoniker": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\StockOut.aspx.cs",
-              "RelativeDocumentMoniker": "StockOut.aspx.cs",
-              "ToolTip": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\StockOut.aspx.cs",
-              "RelativeToolTip": "StockOut.aspx.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAADwvzEAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T19:26:27.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "StockOut.aspx",
               "DocumentMoniker": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\StockOut.aspx",
               "RelativeDocumentMoniker": "StockOut.aspx",
@@ -71,6 +58,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockOut.aspx.cs",
+              "DocumentMoniker": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\StockOut.aspx.cs",
+              "RelativeDocumentMoniker": "StockOut.aspx.cs",
+              "ToolTip": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\InventoryManagement_WebPortal\\StockOut.aspx.cs",
+              "RelativeToolTip": "StockOut.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T19:26:27.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ObjClass.cs",
               "DocumentMoniker": "D:\\Working\\C#\\Projects\\InventoryManagementSystem\\WCFService_InventoryManagement\\ObjClass.cs",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "..\\WCFService_InventoryManagement\\ObjClass.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAmwCcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T09:06:51.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T09:06:51.75Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "App_Code\\Class_Deserialize.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAAAUwFcAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T13:17:32.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T13:17:32.648Z"
             },
             {
               "$type": "Document",
@@ -118,8 +116,7 @@
               "RelativeToolTip": "Site.master.cs",
               "ViewState": "AQIAADcAAAAAAAAAAADwv0cAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T20:41:56.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-15T20:41:56.467Z"
             },
             {
               "$type": "Document",
