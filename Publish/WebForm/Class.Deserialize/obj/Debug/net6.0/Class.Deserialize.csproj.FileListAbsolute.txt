@@ -1,0 +1,11 @@
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\bin\Debug\net6.0\Class.Deserialize.deps.json
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\bin\Debug\net6.0\Class.Deserialize.dll
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\bin\Debug\net6.0\Class.Deserialize.pdb
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.GeneratedMSBuildEditorConfig.editorconfig
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.AssemblyInfoInputs.cache
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.AssemblyInfo.cs
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.csproj.CoreCompileInputs.cache
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.dll
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\refint\Class.Deserialize.dll
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\Class.Deserialize.pdb
+D:\Working\C#\Projects\InventoryManagementSystem\InventoryManagement_WebPortal\Class.Deserialize\obj\Debug\net6.0\ref\Class.Deserialize.dll

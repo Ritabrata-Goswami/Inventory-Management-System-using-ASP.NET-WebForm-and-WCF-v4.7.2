@@ -1,0 +1,7 @@
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\bin\WCFService_InventoryManagement.dll.config
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\bin\WCFService_InventoryManagement.dll
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\bin\WCFService_InventoryManagement.pdb
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\obj\Release\WCFService_InventoryManagement.csproj.AssemblyReference.cache
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\obj\Release\WCFService_InventoryManagement.csproj.CoreCompileInputs.cache
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\obj\Release\WCFService_InventoryManagement.dll
+D:\Working\C#\Projects\InventoryManagementSystem\WCFService_InventoryManagement\obj\Release\WCFService_InventoryManagement.pdb

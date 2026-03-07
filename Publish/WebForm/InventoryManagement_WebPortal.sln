@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "InventoryManagement_WebPortal", ".", "{81ABF4D2-AE66-4915-B7CA-05AA79E19382}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50925"
+		Debug.AspNetCompiler.PhysicalPath = "..\InventoryManagement_WebPortal\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50925\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50925"
+		Release.AspNetCompiler.PhysicalPath = "..\InventoryManagement_WebPortal\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50925\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50925"
+		SlnRelativePath = "..\InventoryManagement_WebPortal\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFService_InventoryManagement", "..\WCFService_InventoryManagement\WCFService_InventoryManagement.csproj", "{41975064-CDD8-4859-899A-6B6B88912A7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81ABF4D2-AE66-4915-B7CA-05AA79E19382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81ABF4D2-AE66-4915-B7CA-05AA79E19382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81ABF4D2-AE66-4915-B7CA-05AA79E19382}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{81ABF4D2-AE66-4915-B7CA-05AA79E19382}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{41975064-CDD8-4859-899A-6B6B88912A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41975064-CDD8-4859-899A-6B6B88912A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41975064-CDD8-4859-899A-6B6B88912A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41975064-CDD8-4859-899A-6B6B88912A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B3265E9-F355-4C74-854F-2A3A410189AC}
+	EndGlobalSection
+EndGlobal

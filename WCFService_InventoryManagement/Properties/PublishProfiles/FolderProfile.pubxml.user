@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Working\C#\Projects\InventoryManagementSystem\Publish\WCFService</_PublishTargetUrl>
+    <History>True|2026-03-04T14:45:35.6049565Z||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/WCFService_InventoryManagement.dll">
+      <publishTime>03/04/2026 20:15:35</publishTime>
+    </File>
+    <File Include="bin/WCFService_InventoryManagement.pdb">
+      <publishTime>03/04/2026 20:15:35</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/28/2026 23:25:52</publishTime>
+    </File>
+    <File Include="Wcf_ServiceApi.svc">
+      <publishTime>02/22/2026 04:40:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/04/2026 20:15:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
